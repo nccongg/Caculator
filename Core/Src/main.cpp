@@ -2,8 +2,9 @@
   ******************************************************************************
   * @file           : main.cpp
   * @brief          : Main program body for STM32 Calculator
-  * @author         : STM32 Calculator Project
+  * @author         : STM32 Calculator Project - Git Demo Version
   * @date           : 2024
+  * @version        : 2.0 - Updated for Git demonstration
   ******************************************************************************
   */
 
@@ -85,7 +86,8 @@ int main(void)
 
     /* Show welcome message */
     display.show_calculator_mode();
-    display.print_line("Ready...");
+    display.print_line("Git Demo - Calculator Ready!");
+    display.print_line("Version 2.0 - Updated for Git demo");
     
     /* Infinite loop */
     while (1)

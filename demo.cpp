@@ -20,7 +20,7 @@ int main() {
     std::cout << "=== STM32 Calculator Demo ===" << std::endl;
     
     // Test Calculator class
-    std::cout << "\n--- Testing Calculator Class ---" << std::endl;
+    std::cout << "\n--- Testing Calculator Class hahahahahahaha---" << std::endl;
     Calculator calc;
     
     // Test basic operations

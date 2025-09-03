@@ -1,0 +1,56 @@
+# Makefile for STM32 Calculator Demo (Desktop version)
+# This is for testing the classes on desktop before deploying to STM32
+
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -Wextra -g
+TARGET = calculator_demo
+SOURCES = demo.cpp Core/Src/calculator.cpp Core/Src/display.cpp Core/Src/keypad.cpp mock_hal.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+
+# Mock STM32 HAL headers (you'll need to create these or use a mock library)
+INCLUDES = -ICore/Inc
+
+# Default target
+all: $(TARGET)
+
+# Build the demo program
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET)
+
+# Compile source files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+# Clean build files
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+
+# Run the demo
+run: $(TARGET)
+	./$(TARGET)
+
+# Install dependencies (Ubuntu/Debian)
+install-deps:
+	sudo apt-get update
+	sudo apt-get install -y build-essential g++
+
+# Install dependencies (macOS)
+install-deps-mac:
+	brew install gcc
+
+# Install dependencies (Windows with MSYS2)
+install-deps-windows:
+	pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-make
+
+# Help
+help:
+	@echo "Available targets:"
+	@echo "  all          - Build the demo program"
+	@echo "  clean        - Remove build files"
+	@echo "  run          - Build and run the demo"
+	@echo "  install-deps - Install build dependencies (Ubuntu/Debian)"
+	@echo "  install-deps-mac - Install build dependencies (macOS)"
+	@echo "  install-deps-windows - Install build dependencies (Windows)"
+	@echo "  help         - Show this help message"
+
+.PHONY: all clean run install-deps install-deps-mac install-deps-windows help

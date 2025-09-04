@@ -23,6 +23,9 @@ int main() {
     std::cout << "\n--- Testing Calculator Class ---" << std::endl;
     Calculator calc;
     
+    std::cout<< "Anh Tung de thuong" << std::endl;
+    int k =0;
+    std::cout << k << "tuong lai" << std::endl;
     // Test basic operations
     std::cout << "5 + 3 = " << calc.add(5, 3) << std::endl;
     std::cout << "10 - 4 = " << calc.subtract(10, 4) << std::endl;
@@ -103,6 +106,7 @@ int main() {
     
     std::cout << "(" << temp_result << ") * 2 = " << calc.get_last_result() << std::endl;
     
+    std::cout << "print huhuhuuuuuu!" << std::endl; 
     std::cout << "\n=== Demo Complete ===" << std::endl;
     return 0;
 }

@@ -13,6 +13,8 @@
 #include "display.h"
 #include "keypad.h"
 
+using namespace std;
+
 // Mock UART handle for testing
 UART_HandleTypeDef mock_huart;
 
@@ -20,13 +22,27 @@ int main() {
     std::cout << "=== STM32 Calculator Demo ===" << std::endl;
     
     // Test Calculator class
-    std::cout << "\n--- Testing Calculator Class ---" << std::endl;
+    std::cout << "\n--- Testing Calculator Class hahahahahahaha---" << std::endl;
+    // In ra hình trái tim bằng ký tự ASCII
+    std::cout << "  ***     ***  " << std::endl;
+    std::cout << " *****   ***** " << std::endl;
+    std::cout << "******* *******" << std::endl;
+    std::cout << " ************* " << std::endl;
+    std::cout << "  ***********  " << std::endl;
+    std::cout << "   *********   " << std::endl;
+    std::cout << "    *******    " << std::endl;
+    std::cout << "     *****     " << std::endl;
+    std::cout << "      ***      " << std::endl;
+    std::cout << "       *       " << std::endl;
     Calculator calc;
     
+    std::cout<< "Anh Nhat sieu  de thuong" << std::endl;
+    int k =0;
+    std::cout << k << " hien tai tuong lai hehehehehe" << std::endl;
     // Test basic operations
-    std::cout << "5 + 3 = " << calc.add(5, 3) << std::endl;
-    std::cout << "10 - 4 = " << calc.subtract(10, 4) << std::endl;
-    std::cout << "6 * 7 = " << calc.multiply(6, 7) << std::endl;
+    std::cout << "3 + 3 = " << calc.add(5, 3) << std::endl;
+    std::cout << "12 - 4 = " << calc.subtract(10, 4) << std::endl;
+    std::cout << "3 * 7 = " << calc.multiply(6, 7) << std::endl;
     std::cout << "15 / 3 = " << calc.divide(15, 3) << std::endl;
     
     // Test error handling
@@ -39,11 +55,6 @@ int main() {
     std::cout << "2^8 = " << calc.power(2, 8) << std::endl;
     std::cout << "sqrt(144) = " << calc.square_root(144) << std::endl;
     std::cout << "25% of 200 = " << calc.percentage(25, 200) << std::endl;
-    
-    // Test memory functions
-    calc.memory_store(100);
-    std::cout << "Memory stored: 100" << std::endl;
-    std::cout << "Memory recall: " << calc.memory_recall() << std::endl;
     
     calc.memory_add(50);
     std::cout << "Memory + 50 = " << calc.memory_recall() << std::endl;
@@ -103,6 +114,7 @@ int main() {
     
     std::cout << "(" << temp_result << ") * 2 = " << calc.get_last_result() << std::endl;
     
+    std::cout << "print huhuhuuuuuu!" << std::endl; 
     std::cout << "\n=== Demo Complete ===" << std::endl;
     return 0;
 }

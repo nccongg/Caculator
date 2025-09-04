@@ -40,9 +40,9 @@ int main() {
     int k =0;
     std::cout << k << "tuong lai" << std::endl;
     // Test basic operations
-    std::cout << "5 + 3 = " << calc.add(5, 3) << std::endl;
-    std::cout << "10 - 4 = " << calc.subtract(10, 4) << std::endl;
-    std::cout << "6 * 7 = " << calc.multiply(6, 7) << std::endl;
+    std::cout << "3 + 3 = " << calc.add(5, 3) << std::endl;
+    std::cout << "12 - 4 = " << calc.subtract(10, 4) << std::endl;
+    std::cout << "3 * 7 = " << calc.multiply(6, 7) << std::endl;
     std::cout << "15 / 3 = " << calc.divide(15, 3) << std::endl;
     
     // Test error handling
@@ -55,11 +55,6 @@ int main() {
     std::cout << "2^8 = " << calc.power(2, 8) << std::endl;
     std::cout << "sqrt(144) = " << calc.square_root(144) << std::endl;
     std::cout << "25% of 200 = " << calc.percentage(25, 200) << std::endl;
-    
-    // Test memory functions
-    calc.memory_store(100);
-    std::cout << "Memory stored: 100" << std::endl;
-    std::cout << "Memory recall: " << calc.memory_recall() << std::endl;
     
     calc.memory_add(50);
     std::cout << "Memory + 50 = " << calc.memory_recall() << std::endl;

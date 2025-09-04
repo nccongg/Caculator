@@ -13,6 +13,8 @@
 #include "display.h"
 #include "keypad.h"
 
+using namespace std;
+
 // Mock UART handle for testing
 UART_HandleTypeDef mock_huart;
 
@@ -21,6 +23,17 @@ int main() {
     
     // Test Calculator class
     std::cout << "\n--- Testing Calculator Class hahahahahahaha---" << std::endl;
+    // In ra hình trái tim bằng ký tự ASCII
+    std::cout << "  ***     ***  " << std::endl;
+    std::cout << " *****   ***** " << std::endl;
+    std::cout << "******* *******" << std::endl;
+    std::cout << " ************* " << std::endl;
+    std::cout << "  ***********  " << std::endl;
+    std::cout << "   *********   " << std::endl;
+    std::cout << "    *******    " << std::endl;
+    std::cout << "     *****     " << std::endl;
+    std::cout << "      ***      " << std::endl;
+    std::cout << "       *       " << std::endl;
     Calculator calc;
     
     // Test basic operations

@@ -38,7 +38,7 @@ int main() {
     
     std::cout<< "Anh Nhat sieu  de thuong" << std::endl;
     int k =0;
-    std::cout << k << "tuong lai hehehehehe" << std::endl;
+    std::cout << k << " hien tai tuong lai hehehehehe" << std::endl;
     // Test basic operations
     std::cout << "3 + 3 = " << calc.add(5, 3) << std::endl;
     std::cout << "12 - 4 = " << calc.subtract(10, 4) << std::endl;
